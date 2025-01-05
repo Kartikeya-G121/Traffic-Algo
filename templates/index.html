@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manhattan Traffic Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Traffic Management</h1>
+            <div class="controls">
+                <div class="buttons">
+                    <button id="clearBtn" class="btn">Clear Route</button>
+                    <button id="calculateBtn" class="btn">Calculate Route</button>
+                </div>
+                <div class="status">
+                    <p id="distance"></p>
+                    <p id="status"></p>
+                </div>
+            </div>
+            <div class="instructions">
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Click on the map to set start point (green)</li>
+                    <li>Click again to set end point (red)</li>
+                    <li>Click "Calculate Route" to find shortest path</li>
+                </ol>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
